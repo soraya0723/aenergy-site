@@ -2,249 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Products | Aecons</title>
-
-  <!-- Modular CSS Files -->
-  
-  <link rel="stylesheet" href="css/navbart.css" />
-  <link rel="stylesheet" href="css/button.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="css/utilities.css" />
-  <link rel="stylesheet" href="css/procard.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aenergy | Smart Solar Solutions</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
-  <!-- Navbar -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <!-- Logo -->
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/icon/viber_image_2025-08-15_14-50-31-958.png" alt="Aecons Logo" class="logo-img" />
-      </a>
-    </div>
 
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- Nav Links -->
-    <ul class="nav-links" id="nav-menu">
+ <!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="logo">Aenergy<span>.</span></div>
+  <nav>
+    <ul>
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="career.html">Career</a></li>
-      <li><a href="products.html">Products</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="product.html">Products</a></li>
+<li><a href="#contact">Contact</a></li>
+
     </ul>
+  </nav>
+</header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Powering Tomorrow<br>With Clean Energy</h1>
+      <p>Leading provider of smart, sustainable solar solutions for homes and businesses.</p>
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+<section id="about" class="about section">
+  <div class="about-container">
+    <div class="about-img">
+      <img src="assets/img/solar-panels.png" alt="Solar panels installed on roof">
+    </div>
+
+    <div class="about-text">
+      <h2>About <span>Aenergy</span></h2>
+      <p>
+        At <strong>Aenergy</strong>, we are driven by a mission to accelerate the world’s transition to clean, renewable energy. 
+        Our solar solutions are built with cutting-edge technology to deliver maximum efficiency, reliability, and sustainability.
+      </p>
+      <p>
+        From design and installation to long-term maintenance, we create customized solar systems for homes, businesses, 
+        and industries — helping you reduce costs, carbon emissions, and dependency on non-renewable sources.
+      </p>
+
+      <a href="#services" class="btn-primary">Learn More</a>
+    </div>
   </div>
-</nav>
+</section>
 
-  <!-- ✅ Products Section -->
-<section class="products-section">
-  <h2>Our Solar Products</h2>
-  <div class="product-grid">
 
-    <!-- 🔆 Product Cards -->
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/XS-G3-31 M.png" alt="GoodWe XS G3 Series" />
+  <!-- ================= SERVICES ================= -->
+<section id="services" class="services section">
+  <h2>Our <span>Services</span></h2>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <div class="icon-box">
+        <img src="assets/icon/residential.svg" alt="Residential Solar">
       </div>
-      <div class="card-body">
-        <h3>GOODWE XS G3 SERIES</h3>
-        <p>Compact single-phase inverter with quiet fanless design and high efficiency.</p>
-        <a href="solarlight.html" class="btn">View Details</a>
-      </div>
+      <h3>Residential Solar</h3>
+      <p>Transform your home into a sustainable energy hub with efficient rooftop solar systems designed for long-term savings.</p>
     </div>
 
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/DNSG30.png" alt="GoodWe DNS G3 Series" />
+    <div class="service-card">
+      <div class="icon-box">
+        <img src="assets/icon/Commerials.svg" alt="Commercial Solar">
       </div>
-      <div class="card-body">
-        <h3>GOODWE DNS G3 SERIES</h3>
-        <p>Single-phase inverter with superb safety, smart monitoring, and reliable performance.</p>
-        <a href="floodlight.html" class="btn">View Details</a>
-      </div>
+      <h3>Commercial Systems</h3>
+      <p>Empower your business with scalable, cost-effective solar installations that drive clean power and operational savings.</p>
     </div>
 
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/MSG3-31-57.png" alt="GoodWe MS G3 Series" />
+    <div class="service-card">
+      <div class="icon-box">
+        <img src="assets/icon/Monitoring.svg" alt="Maintenance">
       </div>
-      <div class="card-body">
-        <h3>GOODWE MS G3 SERIES</h3>
-        <p>5–10kW single-phase inverter with 3 MPPTs, high input current, and 50V startup.</p>
-        <a href="walllight.html" class="btn">View Details</a>
-      </div>
+      <h3>Maintenance & Monitoring</h3>
+      <p>We ensure your solar systems run efficiently with real-time monitoring, expert maintenance, and performance optimization.</p>
+    </div>
+  </div>
+</section>
+
+
+  
+
+  <!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials section" id="testimonials">
+  <h2>What Our <span>Clients Say</span></h2>
+  <div class="testimonial-grid">
+
+    <div class="testimonial-card">
+      <div class="quote-icon">“</div>
+      <p>Solar power is the last energy resource that isn’t owned yet – nobody taxes the sun yet.</p>
+      <h4>— Bonnie Raitt</h4>
     </div>
 
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/ESUniq3-6kW-31.png" alt="GoodWe ES Uniq Series" />
-      </div>
-      <div class="card-body">
-        <h3>GOODWE ES UNIQ SERIES</h3>
-        <p>Flexible hybrid inverter with 3-in-1 port, microgrid capability, and seamless backup.</p>
-        <a href="gardenlight.html" class="btn">View Details</a>
-      </div>
+    <div class="testimonial-card">
+      <div class="quote-icon">“</div>
+      <p>I’ve been very passionate about renewable energy for many years, particularly solar energy and its capacity to bring abundant clean, sustainable energy to millions around the globe.</p>
+      <h4>— Richard Branson</h4>
     </div>
 
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/LynxA.png" alt="GoodWe Lynx A Series Battery" />
-      </div>
-      <div class="card-body">
-        <h3>GOODWE LYNX A SERIES BATTERY</h3>
-        <p>Reliable LFP battery with scalable design, remote monitoring, and compact form.</p>
-        <a href="waterpump.html" class="btn">View Details</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/SMT25.png" alt="GoodWe LVSMT Series" />
-      </div>
-      <div class="card-body">
-        <h3>GOODWE LVSMT SERIES</h3>
-        <p>Low-voltage three-phase inverter with string-level monitoring and fuse-free design.</p>
-        <a href="emergency.html" class="btn">View Details</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/24-31.png" alt="GoodWe LVMT Series" />
-      </div>
-      <div class="card-body">
-        <h3>GOODWE LVMT SERIES</h3>
-        <p>Commercial low-voltage inverter with 4 MPPTs, up to 180% DC oversizing, and 98.8% efficiency.</p>
-        <a href="goodwe.html" class="btn">View Details</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/31.png" alt="GoodWe GM330 Smart Meter" />
-      </div>
-      <div class="card-body">
-        <h3>GOODWE GM330 SMART METER</h3>
-        <p>Three-phase smart meter with Class 0.5 accuracy, flexible CT input, and load monitoring.</p>
-        <a href="rapidshutdown.html" class="btn">View Details</a>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/products/GoodWe/RSD2.png" alt="GoodWe RSD Receiver" />
-      </div>
-      <div class="card-body">
-        <h3>GOODWE RSD RECEIVER</h3>
-        <p>Module-level rapid shutdown device ensuring fire safety and compliance with NEC standards.</p>
-        <a href="powersystem.html" class="btn">View Details</a>
-      </div>
+    <div class="testimonial-card">
+      <div class="quote-icon">“</div>
+      <p>The sun provides a tremendous resource for generating clean and sustainable electricity without toxic pollution or global warming emissions.</p>
+      <h4>— Frances Beinecke</h4>
     </div>
 
   </div>
 </section>
 
 
-
-  <footer>
-  <div class="footer-container">
-    <!-- Left Section -->
-    <div class="footer-left">
-      <p>Follow Us</p>
-      <div class="social-icons">
-        <a href="https://facebook.com/Aecons2021" class="circle-icon facebook" target="_blank" aria-label="Facebook">
-          <!-- Facebook Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-            <path fill="white" d="M279.1 288l14.2-92.7h-88.9V129.3
-                     c0-25.4 12.4-50.1 52.2-50.1H295V6.3
-                     S277.4 0 256.5 0c-73.2 0-121.5 44.4
-                     -121.5 124.7v70.6H96v92.7h39v224.7
-                     h96.4V288z"/>
-          </svg>
-        </a>
-        <a href="https://instagram.com/aeconsdesignbuild" class="circle-icon instagram" target="_blank" aria-label="Instagram">
-          <!-- Instagram Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path fill="white" d="M224.1 141c-63.6 0-115.1 51.5-115.1
-                     115.1s51.5 115.1 115.1 115.1 115.1
-                     -51.5 115.1-115.1S287.7 141 224.1 141z
-                     m0 189.6c-41.1 0-74.5-33.4-74.5-74.5
-                     s33.4-74.5 74.5-74.5 74.5 33.4 74.5
-                     74.5-33.4 74.5-74.5 74.5zM398.8 388
-                     c-7.8 19.5-22.9 34.6-42.4 42.4-29.4
-                     11.7-99.3 9-132.3 9s-102.9 2.6-132.3
-                     -9c-19.5-7.8-34.6-22.9-42.4-42.4
-                     -11.7-29.4-9-99.3-9-132.3s-2.6-102.9
-                     9-132.3c7.8-19.5 22.9-34.6 42.4-42.4
-                     29.4-11.7 99.3-9 132.3-9s102.9-2.6
-                     132.3 9c19.5 7.8 34.6 22.9 42.4 42.4
-                     11.7 29.4 9 99.3 9 132.3s2.6 102.9-9
-                     132.3z"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/company/aecons-design/" class="circle-icon linkedin" target="_blank" aria-label="LinkedIn">
-          <!-- LinkedIn Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path fill="white" d="M100.28 448H7.4V148.9h92.88zm-46.44-341a53.79
-            53.79 0 1 1 53.79-53.8 53.79 53.79 0 0 1-53.8 53.8zM447.9
-            448h-92.68V302.4c0-34.7-12.45-58.4-43.6-58.4-23.76 0-37.88
-            16-44.1 31.4-2.28 5.5-2.85 13.2-2.85
-            20.9V448h-92.78s1.24-267.4 0-295.1h92.78v41.8c-.19.3-.43.7-.62
-            1h.62v-1c12.3-19 34.3-46.1 83.52-46.1
-            60.96 0 106.72 39.8 106.72 125.2V448z"/>
-          </svg>
-        </a>
+  <!-- ================= FOOTER ================= -->
+  <footer id="contact" class="footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>Aenergy<span>.</span></h3>
+        <p>Smart Solar Solutions for a Brighter Future.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Email: info@aenergy.com</p>
+        <p>Phone: +63 912 345 6789</p>
+        <p>Address: Makati City, Philippines</p>
       </div>
     </div>
-      <!-- Center -->
-    <div class="footer-center">
-      <p class="footer-quote">"Advancing excellence in construction."</p>
+    <div class="footer-bottom">
+      <p>© 2025 Aenergy. All rights reserved.</p>
     </div>
-    <!-- Right Section -->
-    <div class="footer-right">
-      <img src="assets/images/permit logo/Bureau_of_Internal_Revenue_(BIR).svg.png" alt="Bureau of Internal Revenue (BIR) Logo" loading="lazy" />
-      <img src="assets/images/permit logo/DTI_Logo_2019.png" alt="Department of Trade and Industry (DTI) Logo" loading="lazy" />
-      <img src="assets/images/permit logo/Professional_Regulation_Commission_(PRC).svg.png" alt="Professional Regulation Commission (PRC) Logo" loading="lazy" />
-      <img src="assets/images/permit logo/Quezon_City.svg.png" alt="Quezon City Logo" loading="lazy" />
-      <img src="assets/images/permit logo/uap-logo.png" alt="United Architects of the Philippines (UAP) Logo" loading="lazy" />
+  </footer>
 
-    </div>
-  </div>
-  
-  <!-- Bottom text -->
-  
-  <p class="footer-bottom">© Aecons Architecture 2025</p>
-</footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/mains.js" defer></script>
-  <script src="js/hero.js" defer></script>
-  <script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-menu");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-    hamburger.classList.toggle("active");
-  });
-
-  // Optional: add scroll effect
-  window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-    navbar.classList.toggle("scrolled", window.scrollY > 20);
-  });
-</script>
 </body>
 </html>

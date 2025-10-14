@@ -52,47 +52,7 @@ a {
   flex-wrap: wrap;
 }
 
-/* ================= NAVBAR ================= */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 10%;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--charcoal);
-}
-
-.logo span {
-  color: var(--red);
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar a {
-  font-weight: 500;
-  color: var(--charcoal);
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: var(--red);
-}
 
 /* ================= HERO ================= */
 .hero {
@@ -398,51 +358,105 @@ a {
 }
 
 
-/* ================= FOOTER ================= */
+/* === FOOTER === */
 .footer {
-  background: var(--charcoal);
-  color: var(--gray-soft);
-  padding: 3rem 10% 1rem;
+  background: #302B31; /* Charcoal base */
+  color: #DCD6D7; /* Soft gray text */
+  padding: 3rem 1.5rem;
+  text-align: left;
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.footer-col h3 {
-  color: var(--white);
-  font-size: 1.5rem;
-  margin-bottom: 0.8rem;
+/* === Headings === */
+.footer h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.footer-col h3 span {
-  color: var(--red);
+.footer h3 span {
+  color: #DF1024; /* Red accent */
 }
 
-.footer-col h4 {
-  color: var(--white);
-  margin-bottom: 0.5rem;
+.footer h4 {
+  color: #DF1024;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-.footer-col ul {
+/* === Text === */
+.footer p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #DCD6D7;
+  margin: 0.4rem 0;
+}
+
+/* === Social Icons === */
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* === Footer Social Links === */
+.social-links {
   list-style: none;
-  line-height: 2;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-.footer-col ul a:hover {
-  color: var(--red);
+.social-links li a {
+  color: #DCD6D7; /* soft gray */
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: var(--gray-soft);
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 1rem;
+/* Accent underline hover */
+.social-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #DF1024; /* Aenergy red */
+  transition: width 0.3s ease;
 }
+
+.social-links li a:hover {
+  color: #DF1024;
+}
+
+.social-links li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive alignment */
+@media (max-width: 768px) {
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+
+
 
     /* ================= PRODUCTS PAGE STYLES ================= */
     .products-section {

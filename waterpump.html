@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aenergy | Smart Solar Solutions</title>
 
-  <!-- ===== Swiper & Fonts ===== -->
+  <!-- Swiper & Fonts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/solarlight.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -21,45 +21,25 @@
   <div id="navbar-placeholder"></div>
 
   <!-- ================= MAIN PRODUCT PAGE ================= -->
-  <main class="products-layout">
+  <main class="product-page">
 
-    <!-- Sidebar Toggle Button (mobile/tablet only) -->
-    <button class="sidebar-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')">
-      ☰
-    </button>
+    <!-- === Product Highlight === -->
+    <section class="product-highlight container">
+      <div class="product-layout">
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <ul>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="solarlight.html">GoodWe XS G3 Series Solar Inverter</a></li>
-        <li><a href="floodlight.html">GoodWe DNS G3 Series</a></li>
-        <li><a href="walllight.html">GoodWe MS G3 Series</a></li>
-        <li><a href="gardenlight.html">GoodWe ES Uniq Series</a></li>
-        <li><a href="waterpump.html" class="active">GoodWe Lynx A Series Battery</a></li>
-        <li><a href="emergency.html">GoodWe LVSMT Series</a></li>
-        <li><a href="goodwe.html">GoodWe LVMT Series</a></li>
-        <li><a href="rapidshutdown.html">GoodWe GM330 Smart Meter</a></li>
-        <li><a href="powersystem.html">RSD Receiver</a></li>
-      </ul>
-    </aside>
-
-    <!-- ================= PRODUCT HIGHLIGHT ================= -->
-    <section class="product-highlight">
-      <div class="container product-layout">
-
-        <!-- Left: Swiper -->
+        <!-- Left: Swiper Gallery -->
         <div class="product-gallery">
-          <div class="swiper-main">
+          <div class="swiper swiper-main">
             <div id="swiperMainWrapper" class="swiper-wrapper">
               <div class="swiper-slide"><img src="assets/products/GoodWe/LynxA L.png" alt="GoodWe Lynx A left view"></div>
               <div class="swiper-slide"><img src="assets/products/GoodWe/LynxA.png" alt="GoodWe Lynx A front view"></div>
               <div class="swiper-slide"><img src="assets/products/GoodWe/LynxA R.png" alt="GoodWe Lynx A right view"></div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
 
-        <!-- Right: Product Info -->
+        <!-- Right: Info -->
         <div class="product-info">
           <h2>GoodWe Lynx A Series Battery</h2>
           <p>
@@ -73,14 +53,14 @@
             <li>⚡ Smart auto-reboot after undervoltage</li>
           </ul>
         </div>
+
       </div>
     </section>
 
-    <!-- ================= FEATURES ================= -->
+    <!-- === Features Section === -->
     <section class="features">
       <h2 class="section-title">Key Features</h2>
-      <div class="features-grid">
-
+      <div class="features-grid container">
         <div class="feature-card">
           <h3>Superb Safety & Reliability</h3>
           <p>Built with proven LFP cell chemistry to ensure long cycle life and safe operation.</p>
@@ -103,20 +83,19 @@
           <h3>Flexible & Scalable Design</h3>
           <p>Expandable and compact, the Lynx A adapts to household needs with multiple installation options.</p>
           <ul>
-            <li>Possess scalability to meet demand</li>
+            <li>Scalable to meet demand</li>
             <li>Compatible with GoodWe ES G2 and other storage inverters</li>
             <li>Cabinet / Floor stacked / Wall-mounted</li>
             <li>Space-saving form factor</li>
           </ul>
         </div>
-
       </div>
     </section>
 
-    <!-- ================= DATASHEET ================= -->
+    <!-- === Datasheet Section === -->
     <section class="datasheet">
       <h2 class="section-title">Datasheet</h2>
-      <div class="table-wrapper">
+      <div class="table-wrapper container">
         <table class="styled-table">
           <thead>
             <tr>
@@ -125,26 +104,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>Usable Energy (kWh)</th>
-              <td>5</td>
-            </tr>
-            <tr>
-              <th>Nominal Voltage (V)</th>
-              <td>51.2</td>
-            </tr>
-            <tr>
-              <th>Nominal Charging / Discharging Current (A)</th>
-              <td>60 / 60</td>
-            </tr>
-            <tr>
-              <th>Mounting Method</th>
-              <td>Cabinet / Floor stacked / Wall-Mounted</td>
-            </tr>
-            <tr>
-              <th>Ingress Protection Rating</th>
-              <td>IP21</td>
-            </tr>
+            <tr><th>Usable Energy (kWh)</th><td>5</td></tr>
+            <tr><th>Nominal Voltage (V)</th><td>51.2</td></tr>
+            <tr><th>Nominal Charging / Discharging Current (A)</th><td>60 / 60</td></tr>
+            <tr><th>Mounting Method</th><td>Cabinet / Floor stacked / Wall-Mounted</td></tr>
+            <tr><th>Ingress Protection Rating</th><td>IP21</td></tr>
           </tbody>
         </table>
       </div>
@@ -152,24 +116,9 @@
 
   </main>
 
-  <!-- ================= SWIPER MODAL ================= -->
-  <div id="swiperModal" style="display: none">
-    <button id="closeModal" aria-label="Close modal">✖</button>
-    <div class="swiper swiper-main">
-      <div class="swiper-wrapper" id="swiperMainWrapper"></div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-    <div class="swiper swiper-thumbs">
-      <div class="swiper-wrapper" id="swiperThumbWrapper"></div>
-    </div>
-  </div>
-
   <!-- ================= FOOTER ================= -->
-  <footer id="contact" class="footer">
-    <div class="footer-content">
-
+  <footer class="footer">
+    <div class="footer-content container">
       <div class="footer-col">
         <h3>Aenergy</h3>
         <p>Smart Solar Solutions for a Brighter Future.</p>
@@ -190,7 +139,6 @@
         <p><strong>Phone:</strong> +63 962 509 2774</p>
         <p><strong>Address:</strong> 13C Sto. Tomas St., Don Manuel, Quezon City</p>
       </div>
-
     </div>
 
     <div class="footer-bottom">
@@ -200,22 +148,15 @@
 
   <!-- ================= SCRIPTS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-  <script src="js/main.js" defer></script>
   <script src="js/sl.js" defer></script>
-  <script src="js/nav.js" defer></script>
   <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-menu");
-
-    hamburger?.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
-      hamburger.classList.toggle("active");
-    });
-
-    window.addEventListener("scroll", () => {
-      const navbar = document.querySelector(".navbar");
-      navbar?.classList.toggle("scrolled", window.scrollY > 20);
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("navbar.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("navbar-placeholder").innerHTML = data)
+        .catch(err => console.error("Navbar load error:", err));
     });
   </script>
+
 </body>
 </html>

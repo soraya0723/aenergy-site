@@ -1,0 +1,240 @@
+/* ============ GLOBAL ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #302B31;
+  line-height: 1.6;
+}
+a {
+  color: #DF1024;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============ HERO SECTION ============ */
+.contact-hero {
+  position: relative;
+  height: 50vh;
+  background: url('../assets/img/N_contact_banner_1.png') center / cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(48, 43, 49, 0.55);
+}
+.contact-hero .hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+}
+.contact-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.contact-hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #DCD6D7;
+}
+
+/* ============ CONTACT SECTION (Refined Aenergy Style) ============ */
+.contact-section {
+  padding: 5rem 1rem;
+  background: linear-gradient(145deg, #f4f2f3 0%, #ffffff 100%);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* ---- CARD ---- */
+.info-card {
+  background: #fff;
+  border: none;
+  border-top: 5px solid #DF1024;
+  border-radius: 20px;
+  flex: 1 1 300px;
+  text-align: center;
+  padding: 2.2rem 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft circular glow accent */
+.info-card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: -50px;
+  right: -50px;
+  background: radial-gradient(circle, rgba(223,16,36,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Hover effects */
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- CONTENT ---- */
+.info-card h3 {
+  color: #302B31;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.info-card a {
+  color: #DF1024;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.info-card a:hover {
+  color: #b70d1d;
+}
+
+/* Optional: make email/phone slightly spaced out */
+.info-card a,
+.info-card p {
+  line-height: 1.6;
+}
+
+
+/* Optional: subtle icon circle for each info-card */
+.info-card::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: -30px;
+  right: -30px;
+  background: rgba(223, 16, 36, 0.05);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* ============ FORM + MAP GRID ============ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.map-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.contact-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.contact-form h2 {
+  color: #302B31;
+  margin-bottom: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #DCD6D7;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #DF1024;
+  outline: none;
+}
+.contact-form button {
+  width: 100%;
+  padding: 0.9rem;
+  background: #DF1024;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact-form button:hover {
+  background: #b70d1d;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #302B31;
+  color: #DCD6D7;
+}
+.palette {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.palette span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .map-container {
+    height: 300px;
+  }
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+}

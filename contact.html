@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Aenergy</title>
+  <link rel="stylesheet" href="css/cont.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- ================= NAVBAR ================= -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- ====== HERO / HEADER ====== -->
+  <header class="contact-hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Get in Touch</h1>
+      <p>We’d love to hear from you. Let’s power your home or business with clean energy.</p>
+    </div>
+  </header>
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section class="contact-section">
+    <div class="container">
+
+      <div class="contact-info">
+        <div class="info-card">
+          <h3>Email</h3>
+          <p><a href="mailto:aenergy.alternativeenergy@gmail.com">aenergy.alternativeenergy@gmail.com</a></p>
+        </div>
+
+        <div class="info-card">
+          <h3>Phone</h3>
+          <p><a href="tel:+639625092774">+63 962 509 2774</a></p>
+        </div>
+
+        <div class="info-card">
+          <h3>Address</h3>
+          <p>
+            13C Sto Tomas St., Quezon City, 1113 Kalakhang Maynila<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps?q=13C%20Sto%20Tomas%20St.%2C%20Quezon%20City%2C%201113%20Kalakhang%20Maynila&output=embed" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!'); this.reset();">
+          <h2>Send a Message</h2>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+ <!-- ================= FOOTER ================= -->
+  <footer id="contact" class="footer">
+    <div class="footer-content">
+      
+      <!-- === Column 1: Brand === -->
+      <div class="footer-col">
+        <h3>Aenergy</h3>
+        <p>Smart Solar Solutions for a Brighter Future.</p>
+      </div>
+
+      <!-- === Column 2: Socials === -->
+      <div class="footer-col">
+        <h4>Socials</h4>
+        <ul class="social-links">
+          <li><a href="https://www.facebook.com/Aenergy.ph/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/a_energyph" target="_blank">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@aenergy.ph" target="_blank">TikTok</a></li>
+        </ul>
+      </div>
+
+      <!-- === Column 3: Contact === -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><strong>Email:</strong> aenergy.alternativeenergy@gmail.com</p>
+        <p><strong>Phone:</strong> +63 962 509 2774</p>
+        <p><strong>Address:</strong> 13C Sto. Tomas St., Don Manuel, Quezon City</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Aenergy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a2e0e9e1c5.js" crossorigin="anonymous"></script>
+
+  <!-- Load Navbar -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading navbar:", error));
+    });
+  </script>
+
+</body>
+</html>

@@ -24,46 +24,57 @@
   </header>
 
   <!-- ====== CONTACT SECTION ====== -->
-  <section class="contact-section">
-    <div class="container">
+<section class="contact-section">
+  <div class="container">
 
-      <div class="contact-info">
-        <div class="info-card">
-          <h3>Email</h3>
-          <p><a href="mailto:aenergy.alternativeenergy@gmail.com">aenergy.alternativeenergy@gmail.com</a></p>
-        </div>
-
-        <div class="info-card">
-          <h3>Phone</h3>
-          <p><a href="tel:+639625092774">+63 962 509 2774</a></p>
-        </div>
-
-        <div class="info-card">
-          <h3>Address</h3>
-          <p>
-            13C Sto Tomas St., Quezon City, 1113 Kalakhang Maynila<br>
-          </p>
-        </div>
+    <div class="contact-info">
+      <div class="info-card">
+        <h3>Email</h3>
+        <p><a href="mailto:aenergy.alternativeenergy@gmail.com">aenergy.alternativeenergy@gmail.com</a></p>
       </div>
 
-      <div class="contact-grid">
-        <div class="map-container">
-          <iframe 
-            src="https://www.google.com/maps?q=13C%20Sto%20Tomas%20St.%2C%20Quezon%20City%2C%201113%20Kalakhang%20Maynila&output=embed" 
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!'); this.reset();">
-          <h2>Send a Message</h2>
-          <input type="text" placeholder="Full Name" required>
-          <input type="email" placeholder="Email Address" required>
-          <textarea rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+      <div class="info-card">
+        <h3>Phone</h3>
+        <p><a href="tel:+639625092774">+63 962 509 2774</a></p>
       </div>
 
+      <div class="info-card">
+        <h3>Address</h3>
+        <p>
+          13C Sto Tomas St., Quezon City, 1113 Kalakhang Maynila<br>
+        </p>
+      </div>
     </div>
-  </section>
+
+    <div class="contact-grid">
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps?q=13C%20Sto%20Tomas%20St.%2C%20Quezon%20City%2C%201113%20Kalakhang%20Maynila&output=embed" 
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- ✅ CONNECTED TO FORMSPREE -->
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvgvynwb" method="POST">
+        <h2>Send a Message</h2>
+
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <!-- Optional hidden field to set email subject -->
+        <input type="hidden" name="_subject" value="New Message from Aenergy Website" />
+
+        <button type="submit">Send Message</button>
+        <p id="form-status"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+
 
  <!-- ================= FOOTER ================= -->
   <footer id="contact" class="footer">
@@ -114,6 +125,28 @@
         .catch(error => console.error("Error loading navbar:", error));
     });
   </script>
+  <!-- ✅ OPTIONAL JS FOR FEEDBACK (no alert popups) -->
+<script>
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      status.textContent = "✅ Message sent successfully!";
+      form.reset();
+    } else {
+      status.textContent = "❌ Oops! Something went wrong. Please try again.";
+    }
+  });
+</script>
 
 </body>
 </html>

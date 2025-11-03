@@ -23,7 +23,6 @@ a:hover {
   position: relative;
   height: 50vh;
   background: url('../assets/img/N_contact_banner_1.png') center / cover no-repeat;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +52,7 @@ a:hover {
   color: #DCD6D7;
 }
 
-/* ============ CONTACT SECTION (Refined Aenergy Style) ============ */
+/* ============ CONTACT SECTION ============ */
 .contact-section {
   padding: 5rem 1rem;
   background: linear-gradient(145deg, #f4f2f3 0%, #ffffff 100%);
@@ -64,6 +63,7 @@ a:hover {
   margin: 0 auto;
 }
 
+/* ---- INFO CARDS ---- */
 .contact-info {
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +72,6 @@ a:hover {
   margin-bottom: 4rem;
 }
 
-/* ---- CARD ---- */
 .info-card {
   background: #fff;
   border: none;
@@ -87,26 +86,23 @@ a:hover {
   overflow: hidden;
 }
 
-/* Soft circular glow accent */
 .info-card::after {
   content: "";
   position: absolute;
-  width: 120px;
-  height: 120px;
-  top: -50px;
-  right: -50px;
-  background: radial-gradient(circle, rgba(223,16,36,0.08) 0%, transparent 70%);
+  width: 90px;
+  height: 90px;
+  top: -30px;
+  right: -30px;
+  background: rgba(223, 16, 36, 0.05);
   border-radius: 50%;
   z-index: 0;
 }
 
-/* Hover effects */
 .info-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
-/* ---- CONTENT ---- */
 .info-card h3 {
   color: #302B31;
   margin-bottom: 0.75rem;
@@ -132,32 +128,13 @@ a:hover {
   color: #b70d1d;
 }
 
-/* Optional: make email/phone slightly spaced out */
-.info-card a,
-.info-card p {
-  line-height: 1.6;
-}
-
-
-/* Optional: subtle icon circle for each info-card */
-.info-card::after {
-  content: "";
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  top: -30px;
-  right: -30px;
-  background: rgba(223, 16, 36, 0.05);
-  border-radius: 50%;
-  z-index: 0;
-}
-
 /* ============ FORM + MAP GRID ============ */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
+
 .map-container {
   width: 100%;
   height: 400px;
@@ -165,16 +142,19 @@ a:hover {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 .contact-form {
   background: #fff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
+
 .contact-form h2 {
   color: #302B31;
   margin-bottom: 1rem;
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -185,11 +165,13 @@ a:hover {
   font-family: inherit;
   font-size: 1rem;
 }
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #DF1024;
   outline: none;
 }
+
 .contact-form button {
   width: 100%;
   padding: 0.9rem;
@@ -202,6 +184,7 @@ a:hover {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .contact-form button:hover {
   background: #b70d1d;
 }
@@ -226,15 +209,123 @@ a:hover {
   display: inline-block;
 }
 
-/* ============ RESPONSIVE ============ */
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
+/* ============ HERO SECTION (Responsive Fix - Final) ============ */
+.contact-hero {
+  position: relative;
+  min-height: 60vh; /* default height for desktop */
+  background: url('../assets/img/N_contact_banner_1.png') center top / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(48, 43, 49, 0.55);
+}
+
+.contact-hero .hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+}
+
+.contact-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.contact-hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #DCD6D7;
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 992px) {
+  .contact-hero {
+    min-height: 55vh;
+    background-position: center top;
+  }
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+  .contact-hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 65vh; /* more height for mobile landscape */
+    background-position: top center;
+  }
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+  .contact-hero p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .contact-section {
+    padding: 4rem 1.5rem;
+  }
+  .info-card {
+    flex: 1 1 100%;
+  }
+  .contact-form h2 {
+    font-size: 1.2rem;
   }
   .map-container {
     height: 300px;
   }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    min-height: 75vh; /* ensure banner + logo visible */
+    background-position: top center;
+  }
   .contact-hero h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+  .contact-hero p {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .contact-section {
+    padding: 3.5rem 1rem;
+  }
+  .info-card {
+    padding: 1.6rem 1.2rem;
+    border-radius: 15px;
+  }
+  .info-card h3 {
+    font-size: 1.05rem;
+  }
+  .info-card a {
+    font-size: 0.95rem;
+  }
+  .contact-form {
+    padding: 1.5rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+  .contact-form button {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+  .map-container {
+    height: 250px;
   }
 }

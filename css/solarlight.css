@@ -271,22 +271,131 @@ body {
   background: var(--gray-soft);
 }
 
-/* --- Responsive --- */
+/* ===================== TABLET (max-width: 992px) ===================== */
 @media (max-width: 992px) {
   .product-layout {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
 
   .product-gallery {
     flex: 1 1 100%;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .product-gallery .swiper-main {
-    max-width: 95%;
+    height: 350px;
   }
 
   .product-info {
     flex: 1 1 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .product-info h2 {
+    font-size: 2rem;
+  }
+
+  .product-info p {
+    font-size: 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .feature-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .styled-table th, .styled-table td {
+    font-size: 0.9rem;
   }
 }
+
+/* ===================== MOBILE (max-width: 600px) ===================== */
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+    padding: 1.5rem 0;
+  }
+
+  .product-highlight {
+    padding: 3.5rem 0;
+  }
+
+  .product-info h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .product-info p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+  }
+
+  /* Image gallery */
+  .product-gallery .swiper-main {
+    height: 280px;
+  }
+
+  .swiper-slide img {
+    height: auto;
+    max-height: 250px;
+  }
+
+  /* Features section */
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  /* Datasheet table scroll */
+  .styled-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.85rem;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+/* ===================== SMALL MOBILE (max-width: 400px) ===================== */
+@media (max-width: 400px) {
+  .product-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.85rem;
+  }
+
+  .swiper-slide img {
+    max-height: 200px;
+  }
+
+  .feature-card {
+    padding: 1.2rem 1rem;
+  }
+}
+

@@ -378,7 +378,22 @@ body {
     padding: 0.7rem 0.9rem;
   }
 }
+/* Hide Swiper arrows and pagination */
+  .product-gallery .swiper-button-next,
+  .product-gallery .swiper-button-prev,
+  .product-gallery .swiper-pagination {
+    display: none !important;
+  }
 
+  /* Show only first image (hide the rest) */
+  .product-gallery .swiper-slide:not(:first-child) {
+    display: none !important;
+  }
+
+  /* Disable swipe interaction */
+  .swiper-main {
+    pointer-events: none;
+  }
 /* ===================== SMALL MOBILE (max-width: 400px) ===================== */
 @media (max-width: 400px) {
   .product-info h2 {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="sitemap-style.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ===== Core Pages ===== -->
   <url>
     <loc>https://aenergyph.com/</loc>
     <lastmod>2025-11-12</lastmod>
@@ -32,7 +32,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- ===== Product Detail Pages ===== -->
+  <!-- Product Detail Pages -->
   <url>
     <loc>https://aenergyph.com/solarlight.html</loc>
     <lastmod>2025-11-12</lastmod>
@@ -87,7 +87,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- ===== Optional Legal / Info Pages ===== -->
+  <!-- Legal Page -->
   <url>
     <loc>https://aenergyph.com/privacy.html</loc>
     <lastmod>2025-11-12</lastmod>
